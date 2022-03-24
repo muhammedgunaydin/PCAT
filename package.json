@@ -4,7 +4,8 @@
   "description": "pcat app",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/muhammedgunaydin/PCAT/issues"
   },
-  "homepage": "https://github.com/muhammedgunaydin/PCAT#readme"
+  "homepage": "https://github.com/muhammedgunaydin/PCAT#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }

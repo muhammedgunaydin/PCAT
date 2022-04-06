@@ -1,15 +1,14 @@
-<%-include('partials/_header')-%>
+<%- include('partials/_header') -%>
 
 	<body>
 		<div class="tm-page-wrap mx-auto">
 			<div class="position-relative">
 
-				<%-include('partials/_navigation')-%>
+				<%- include('partials/_navigation') -%>
 
 					<div class="tm-welcome-container tm-fixed-header tm-fixed-header-1">
 						<div class="text-center">
-							<p class="pt-5 px-3 tm-welcome-text tm-welcome-text-2 mb-1 text-white mx-auto">Background
-								image can be fixed. Content will simply slide over.</p>
+							<p class="pt-5 px-3 tm-welcome-text tm-welcome-text-2 mb-1 text-white mx-auto"></p>
 						</div>
 					</div>
 
@@ -23,7 +22,8 @@
 					<main>
 						<div class="row mb-5 pb-4">
 							<div class="col-12">
-								<img src="<%= photo.image %>" alt="Image" class="img-fluid tm-catalog-item-img">
+								<img src="<%= photo.image %>" name="image" alt="Image"
+									class="img-fluid tm-catalog-item-img">
 							</div>
 						</div>
 						<div class="row mb-5 pb-5">
@@ -42,20 +42,22 @@
 								<!-- Share box -->
 								<div class="tm-bg-gray tm-share-box">
 									<div class="text-center">
-										<button
+										<a href="/photos/edit/<%= photo._id %>"
 											class="btn btn-primary p-0 mb-4 tm-btn-animate tm-btn-download tm-icon-download"><span>Update
-												Details</span></button>
+												Details</span></a>
 									</div>
 									<div class="text-center">
-										<button
+										<a href="/photos/<%= photo._id %>?_method=DELETE"
+											onclick="return confirm('ARE YOU SURE?')"
 											class="btn btn-danger p-0 tm-btn-animate tm-btn-download tm-icon-download"><span>Delete
-												Photo</span></button>
+												Photo</span></a>
 									</div>
 								</div>
 							</div>
 						</div>
 					</main>
-					<%-include('partials/_footer')-%>
+
+					<%- include('partials/_footer') -%>
 
 	</body>
 
